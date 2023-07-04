@@ -1,0 +1,47 @@
+import React,{useState} from "react";
+import "./MainPage.css"
+export function MainPage(){
+    let [menuVis,setMenuVis]=useState("visible");
+    let src="data:image/png;base64,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";
+    function handleMenu(e){
+        menuVis==="visible"?setMenuVis("hidden"):setMenuVis("visible");
+    }
+return(
+<>
+<div onMouseEnter={handleMenu} onMouseLeave={handleMenu} id="menu-icon"><img style={{visibility:menuVis}} width="25px" height="25px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAADPz8+WlpZLS0v7+/vu7u5vb29TU1PDw8Pz8/N8fHyCgoITExMzMzOsrKyPj4+6urrU1NTo6Oizs7NCQkJkZGQoKCilpaUtLS05OTmenp7IyMiFhYVaWlpqamoLCwt+baPtAAACfUlEQVR4nO3di27CMAyF4TBWoAxYx2UX2Abv/5RbpSE2aXLSJpJl5/+ewEdQSlLXCQEAAAAAAAAAAAAAAAAA/Fu2H5/3dnyu2uWgfLv5xJ75Ljlf02kXO1LXpAWcHbQrHe0wSwm4XGvXmWGdcDU2G+0qs2ziX9SVdo2ZVrGAW+0Ks20jCZ+1C8z2LAecaddXgPx7+qhdXgGPYsKzdnkFnMWEL9rlFfAiJrxol1eCmFC7uCLEhJb/sV2txYT32uUVcBATWl03/daJCd+1yyvgXUzo4Mf0IgcMr9oFZnuNJGzetCvM9BZdIFq/EiNXof3v6SkeMISpdpUZpikBQ3jSrnO0p7SA3+tgixvCk8k8aS/xx2561K53oGOXvuV9Dbm9s2M7OB4AAAAAAAAAALBj2Z6mdpwGvm4Rmv1C+1nSYIt94rsIvdZmN/umTQ34oF3qaA9pAe19QW8WKQFtPuG+mscDWu/0lru8g4dm/Vi7gvVXZqIvzTTa9RUg3xbtNgvdyG1Ddm+FN/JN0Vqf0H82YkL7LcKxJmHt6oqo/DO0uaj46ygm9P9b6v9+6P8/jf//pRWsLfyvDytY41ewT2P5ppi411bBfmkFe949588tAAAAAAAAAACAJc7nRO06aw/Yhs36mtkcen1Onte21y51tMSZe+7nJp60q8ySMPvS/fzSxvrc+egMWtvzWXuxOcLa9RXg+yrsyVei/5nsdg+zupHn6vs/G0G7uiIqT2j9ft+Tz5mxuWz6Sz4ryHqXd0/u9Lbfqh9t1nd/7loFZ+eZf2kmev5hBWdY+j+HtIKzZCs4Dzj4P9O5Z+1c7g9euAAAAAAAAAAAAAAAAABQhS+ZyFZoP93BCgAAAABJRU5ErkJggg=="/>
+<div id="dropDownMenu" style={{visibility:menuVis==="hidden"?"visible":'hidden'}}>
+    <p style={{visibility:menuVis==="hidden"?"visible":'hidden'}} className="menuItems">MATH: PRE-K - 8TH GRADE <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">MATH: GET READY COURSES <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">MATH: HIGH SCHOOL & COLLEGE <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">TEST PREP <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">SCIENCE <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">COMPUTING <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">ARTS & HUMANITIES <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">ECONOMICS <img style={{width:"10px",height:"10px"}} src={src}/></p> 
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">READING & LANGUAGE ARTS <img style={{width:"10px",height:"10px"}} src={src}/></p>
+    <br/>
+    <p style={{visibility:menuVis==="hidden"?"visible":"hidden"}} className="menuItems">LIFE SKILLS <img style={{width:"10px",height:"10px"}} src={src}/></p>  
+</div>
+</div>
+<h1 style={{color:"green"}}>Khan Academy</h1>
+<input name="search" defaultValue="Search"></input><br/>
+<img src="https://cdn.kastatic.org/images/lohp/hero_student_collage_US_1x.png"/><div style={{float:"right","marginRight":"20%"}} id="sponsor"><h2 style={{fontSize:"40px"}}>For every student, <br/>every classroom. <br/>Real results</h2><br/>We’re a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.<br/>
+<br/><div><button className="sponsor">Learners</button><button className="sponsor">Teachers</button><button className="sponsor">Districts</button><button className="sponsor">Parents</button></div></div><br/><br/><br/>
+<div style={{overflow:"scroll",backgroundColor:"lightGray"}}><h2>Classes You Are Taking</h2><br/><div id="classes"><div className="classBlocks"><p>Pre-Calc</p> <br/> Matrices- 60%</div><div className="classBlocks"><p>AP Calc BC</p> <br/> Derivatives- 90% <br/> Integrals- 10%</div></div></div><br/>
+<div style={{backgroundColor:"aquamarine"}}><h1>Why Khan Academy Works</h1><br/>
+<div className="works"><h3>Personalized Learning</h3><br/><p>Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning.</p></div>
+<div className="works"><h3>Trusted content</h3><br/><p>Created by experts, Khan Academy’s library of trusted, standards-aligned practice and lessons covers math K-12 through early college, grammar, science, history, AP®, SAT®, and more. It’s all free for learners and teachers.</p></div>
+<div className="works"><h3>Tools to empower teachers</h3><br/><p>With Khan Academy, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</p></div></div>
+
+</>
+
+);
+}
